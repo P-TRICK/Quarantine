@@ -4,27 +4,28 @@ using UnityEngine;
 
 public class DraggableComponent : MonoBehaviour {
 
-    public Rigidbody2D rigidBody;
+    //public Rigidbody2D rigidBody;
     
 	//Contains current object location on screen
-    public Vector2 objectPlace;
+   // public Vector2 objectPlace;
 
 	//Contains object transform info
-	public Transform objectTransform;
+	//public Transform objectTransform;
 
 	//Mouse position is relative to game world (otherwise itll be wayyy out there)
-	public Vector2 mousePos;
-	public float objX;
-	public float objY;
+	//public Vector2 mousePos;
+	//public float objX;
+	//public float objY;
 
 	private Vector2 _newPos;
 
 	// Use this for initialization
 	void Start () {
         //Get the rigidBody component of the player
-        rigidBody = GetComponent<Rigidbody2D>();
-		//Gets transfrom component
-		objectTransform = GameObject.Find("ObjectiveObject").GetComponent<Transform>();
+        //rigidBody = GetComponent<Rigidbody2D>();
+        //Gets transfrom component
+        //objectTransform = GameObject.Find("ObjectiveObject").GetComponent<Transform>();
+       // objectTransform = transform;
 	}
 	
 	// Update is called once per frame
@@ -58,10 +59,10 @@ public class DraggableComponent : MonoBehaviour {
 		*
 		*/
 
-		objectPlace = transform.position;
+		//objectPlace = transform.position;
 
 		//Gets actual mouse position (to the same type as object (world))
-		mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		//mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
 
 		//*** BAD
@@ -80,8 +81,8 @@ public class DraggableComponent : MonoBehaviour {
 		//mousePos = Camera.main.WorldToScreenPoint(objectPlace);
 
 		//to find distance of mouse from obj in x and y
-		objX = mousePos.x - objectPlace.x;      //Input.mousePosition.x - objectPlace.x; >> this does not use mouse pos relative to world screen
-		objY = mousePos.y - objectPlace.y;      //Input.mousePosition.y - objectPlace.y; >> this does not use mouse pos relative to world screen
+		//objX = mousePos.x - objectPlace.x;      //Input.mousePosition.x - objectPlace.x; >> this does not use mouse pos relative to world screen
+		//objY = mousePos.y - objectPlace.y;      //Input.mousePosition.y - objectPlace.y; >> this does not use mouse pos relative to world screen
 
 		//DEBUG TESTS
 		//
@@ -94,23 +95,24 @@ public class DraggableComponent : MonoBehaviour {
 
 	//For draggin the object
 	void OnMouseDrag(){
-		//Debug.Log (objectPlace);
+        //Debug.Log (objectPlace);
 
-		//** BAD XXXX    INCREASED OBJECT POSITION BY NOT ADJUSTING TO DISPLACEMENT
-		//_newPos = new Vector2 (Input.mousePosition.x + objectPlace.x, Input.mousePosition.y + objectPlace.y);
+        //** BAD XXXX    INCREASED OBJECT POSITION BY NOT ADJUSTING TO DISPLACEMENT
+        //_newPos = new Vector2 (Input.mousePosition.x + objectPlace.x, Input.mousePosition.y + objectPlace.y);
 
-		//AFTER FINDING DISPLACEMENT WHEN THE OBJECT IS FIRST CLICKED
-		//THIS CREATES A NEW VECTOR2 WHERE THE MOUSE IS 'TECHNICALLY' AT THE CENTER OF THE OBJECT
-		//IT IS DRAGGING BY SUBTRACTING THE CURRENT MOUSE POSITION BY THE AMOUNT OF
-		//ITS DISPLACEMENT
-		//mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		_newPos = new Vector2(Input.mousePosition.x - objX , Input.mousePosition.y - objY);
+        //AFTER FINDING DISPLACEMENT WHEN THE OBJECT IS FIRST CLICKED
+        //THIS CREATES A NEW VECTOR2 WHERE THE MOUSE IS 'TECHNICALLY' AT THE CENTER OF THE OBJECT
+        //IT IS DRAGGING BY SUBTRACTING THE CURRENT MOUSE POSITION BY THE AMOUNT OF
+        //ITS DISPLACEMENT
+        //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //_newPos = new Vector2(Input.mousePosition.x - objX , Input.mousePosition.y - objY);
+        _newPos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-		//(mousePos.x - objX, mousePos.y - objY);
+        //(mousePos.x - objX, mousePos.y - objY);
 
-		//change from screen to world value, to apply change
-		Vector2 finPos = Camera.main.ScreenToWorldPoint (_newPos);
-		transform.position = finPos;//_newPos;
+        //change from screen to world value, to apply change
+        //Vector2 finPos = Camera.main.ScreenToWorldPoint (_newPos);
+        transform.position = _newPos;//_newPos;
 
 		//objectPlace = GameObject.FindGameObjectWithTag("Object").transform.position;
 
