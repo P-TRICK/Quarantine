@@ -11,7 +11,7 @@ public class BasicEnemyMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Finds 
-		objectToMoveTo = GameObject.Find("Object");
+		objectToMoveTo = GameObject.Find("ObjectiveObject");
 	}
 	
 	// Update is called once per frame

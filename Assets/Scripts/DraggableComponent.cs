@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eric_lee_DragMove : MonoBehaviour {
+public class DraggableComponent : MonoBehaviour {
 
     public Rigidbody2D rigidBody;
     
@@ -24,7 +24,7 @@ public class Eric_lee_DragMove : MonoBehaviour {
         //Get the rigidBody component of the player
         rigidBody = GetComponent<Rigidbody2D>();
 		//Gets transfrom component
-		objectTransform = GameObject.Find("Object").GetComponent<Transform>();
+		objectTransform = GameObject.Find("ObjectiveObject").GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
