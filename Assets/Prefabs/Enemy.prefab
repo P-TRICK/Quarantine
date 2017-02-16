@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61143232107812844}
   - component: {fileID: 50677378081608434}
   - component: {fileID: 114724491867050306}
-  - component: {fileID: 114949420935675358}
   - component: {fileID: 114642407259103528}
   m_Layer: 0
   m_Name: Enemy
@@ -39,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214963364536366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.65, y: 0.96, z: 0}
+  m_LocalPosition: {x: -3.66, y: -0.03, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,23 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96a0f9a82bb038479b396cabf83b7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114949420935675358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1214963364536366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e0c1675b2af0274d8fb19336f534c6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidBody: {fileID: 0}
-  objectPlace: {x: 0, y: 0}
-  objectTransform: {fileID: 0}
-  mousePos: {x: 0, y: 0}
-  objX: 0
-  objY: 0
 --- !u!212 &212705433421889174
 SpriteRenderer:
   m_ObjectHideFlags: 1

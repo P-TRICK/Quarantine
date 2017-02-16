@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4181011875296628}
-  - component: {fileID: 114807388033361404}
-  - component: {fileID: 96978990940891434}
   - component: {fileID: 212946375833212846}
+  - component: {fileID: 96978990940891434}
+  - component: {fileID: 114807388033361404}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -56,7 +56,7 @@ TrailRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,29 +83,35 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 1
+        value: 0.4915254
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0.084745765
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
+      m_RotationOrder: 0
     colorGradient:
       key0:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4294246144
       key1:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4278255400
       key2:
         serializedVersion: 2
-        rgba: 0
+        rgba: 4282861383
       key3:
         serializedVersion: 2
-        rgba: 0
+        rgba: 16725760
       key4:
         serializedVersion: 2
-        rgba: 0
+        rgba: 16725760
       key5:
         serializedVersion: 2
         rgba: 0
@@ -117,15 +123,15 @@ TrailRenderer:
         rgba: 0
       ctime0: 0
       ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
+      ctime2: 31226
+      ctime3: 65535
+      ctime4: 65535
       ctime5: 0
       ctime6: 0
       ctime7: 0
       atime0: 0
       atime1: 65535
-      atime2: 0
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0

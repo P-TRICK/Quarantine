@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212122832576234582}
   - component: {fileID: 61573309777234214}
   - component: {fileID: 50103974941129162}
-  - component: {fileID: 114121482409640808}
+  - component: {fileID: 114289005079508560}
   m_Layer: 0
   m_Name: ObjectiveObject
   m_TagString: Object
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1079876542816480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9568849, y: -1.660477, z: 0}
+  m_LocalPosition: {x: 1.99, y: -0.02, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
---- !u!114 &114121482409640808
+--- !u!114 &114289005079508560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,15 +85,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1079876542816480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e0c1675b2af0274d8fb19336f534c6a, type: 3}
+  m_Script: {fileID: 11500000, guid: b96a0f9a82bb038479b396cabf83b7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 0}
-  objectPlace: {x: 0, y: 0}
-  objectTransform: {fileID: 0}
-  mousePos: {x: 0, y: 0}
-  objX: 0
-  objY: 0
 --- !u!212 &212122832576234582
 SpriteRenderer:
   m_ObjectHideFlags: 1
